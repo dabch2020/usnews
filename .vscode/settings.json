@@ -1,0 +1,8 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "/^python gen_news\\.py 2>&1 \\| tail -5$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    }
+}

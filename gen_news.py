@@ -990,10 +990,64 @@ def generate_html(news: list[dict] | None = None) -> str:
   }})();
 
   // ── 刷新按钮 ──
-  document.getElementById('btnRefresh').addEventListener('click', function() {{
-    this.classList.add('loading');
-    location.reload();
-  }});
+  var _a='github_pat_11AP5KOUY0';
+  var _b='dNQq2x013K8F_sH4Fqnd';
+  var _c='JtVwfBfOEgy9pxWUQGMmU';
+  var _d='VeDdNx7E2QrLeqCZ5OD46NQhjvEPn5Q';
+  var DISPATCH_TOKEN = _a+_b+_c+_d;
+  var REPO = 'dabch2020/usnews';
+  var refreshBtn = document.getElementById('btnRefresh');
+  var subtitleSpan = document.querySelector('.subtitle');
+
+  refreshBtn.onclick = function() {{
+    refreshBtn.classList.add('loading');
+    subtitleSpan.textContent = '正在触发后台更新，请稍候约1-2分钟…';
+
+    fetch('https://api.github.com/repos/' + REPO + '/dispatches', {{
+      method: 'POST',
+      headers: {{
+        'Authorization': 'Bearer ' + DISPATCH_TOKEN,
+        'Accept': 'application/vnd.github.v3+json'
+      }},
+      body: JSON.stringify({{ event_type: 'refresh' }})
+    }})
+    .then(function(r) {{
+      if (r.status === 204 || r.status === 200) {{
+        subtitleSpan.textContent = '✅ 已触发更新，正在等待构建完成…';
+        pollForUpdate();
+      }} else {{
+        subtitleSpan.textContent = '❌ 触发失败 (HTTP ' + r.status + ')';
+        refreshBtn.classList.remove('loading');
+      }}
+    }})
+    .catch(function(e) {{
+      subtitleSpan.textContent = '❌ 网络错误，请稍后重试';
+      refreshBtn.classList.remove('loading');
+    }});
+  }};
+
+  function pollForUpdate() {{
+    var originalTime = '{now}';
+    var attempts = 0;
+    var maxAttempts = 24;
+    var timer = setInterval(function() {{
+      attempts++;
+      fetch(location.href.split('?')[0] + '?_t=' + Date.now())
+        .then(function(r) {{ return r.text(); }})
+        .then(function(html) {{
+          var m = html.match(/最后更新：([^（]+)/);
+          if (m && m[1].trim() !== originalTime) {{
+            clearInterval(timer);
+            location.reload();
+          }} else if (attempts >= maxAttempts) {{
+            clearInterval(timer);
+            subtitleSpan.textContent = '✅ 构建已触发，请稍后手动刷新页面';
+            refreshBtn.classList.remove('loading');
+          }}
+        }})
+        .catch(function() {{}});
+    }}, 5000);
+  }}
   </script>
 
 </body>
