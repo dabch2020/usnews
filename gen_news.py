@@ -990,11 +990,10 @@ def generate_html(news: list[dict] | None = None) -> str:
   }})();
 
   // ── 刷新按钮 ──
-  var btn = document.querySelector('.btn-refresh');
-  btn.onclick = function() {{
-    btn.classList.add('loading');
+  document.getElementById('btnRefresh').addEventListener('click', function() {{
+    this.classList.add('loading');
     location.reload();
-  }};
+  }});
   </script>
 
 </body>
