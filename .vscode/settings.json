@@ -3,6 +3,10 @@
         "/^python gen_news\\.py 2>&1 \\| tail -5$/": {
             "approve": true,
             "matchCommandLine": true
-        }
+        },
+        "git add": true,
+        "git commit": true,
+        "git push": true,
+        "git rebase": true
     }
 }

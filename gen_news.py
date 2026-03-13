@@ -703,7 +703,8 @@ def generate_html(news: list[dict] | None = None) -> str:
         cards.append(card)
 
     cards_html = "\n".join(cards)
-    now = datetime.now().strftime("%Y-%m-%d %H:%M")
+    beijing_tz = timezone(timedelta(hours=8))
+    now = datetime.now(beijing_tz).strftime("%Y-%m-%d %H:%M")
     total = len(news)
 
     return f"""\
@@ -935,7 +936,7 @@ def generate_html(news: list[dict] | None = None) -> str:
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：{now}（每小时自动刷新）</p>
+    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：{now} 北京时间（每小时自动刷新）</p>
   </header>
 
   <div class="sources">
