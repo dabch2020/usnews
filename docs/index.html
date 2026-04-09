@@ -226,7 +226,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-04-10 05:37 北京时间（每小时自动刷新）</p>
+    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-04-10 06:30 北京时间（每小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -251,7 +251,7 @@
   </div>
 
   <main class="container">
-    <p class="stats" id="statsText">共聚合 46 条言论</p>
+    <p class="stats" id="statsText">共聚合 45 条言论</p>
     <article class="card" data-person="">
       <div class="card-header">
         <span class="badge" style="background:#eeeeee;color:#333333">科技资讯</span>
@@ -395,14 +395,6 @@
       </div>
       <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMiekFVX3lxTE43NDBDeHFMVlpYQUprdDU0MHJhNnRETkxJY1ctVzhOdjFZWGFSV0dWWmRSbDlwMDFna09lQVJQWUhVWXgwY0M4NGdsVDAzc3BqUzQ5OUNKWnZiTm9NS3BwYno2REJOakx3ZDZwVmlJM2hBS1N5cWg2aTFB?oc=5" target="_blank" rel="noopener">Meta’s New AI Model Gives Mark Zuckerberg a Seat at the Big Kid’s Table - WIRED</a></h3>
       <p class="card-summary">Meta 于周三宣布了自首席执行官马克·扎克伯格去年在一个名为 Meta Intelligence Labs 的新部门重新启动该公司人工智能工作以来的第一个主要模型。该公司表示，该模型名为 Muse Spark，是朝着扎克伯格“个人超级智能”愿景迈出的一步，目前该模型仍将保持闭源状态。扎克伯格在社交媒体帖子中表示，Meta 的目标是打造“不仅能回答你的问题，还能充当为你做事的代理”的人工智能产品。酒吧…</p>
-    </article>
-    <article class="card" data-person="Sam Altman">
-      <div class="card-header">
-        <span class="badge" style="background:#e8f5e9;color:#2e7d32">Sam Altman</span>
-        <span class="meta">OpenAI News · Wed, 08 Apr 2026 18:07:07 GMT</span>
-      </div>
-      <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMic0FVX3lxTFBtSm8tRnpBbGwzZ092NmxWeVctWkJYZFRhN2xSS0J0bHEzcFVjUlJaU0g5XzlldW5BT3M5YXZrLWVFZE1rNGw3MVFWNmQ4TmtXVnkxRUNiUTFUaXJoaDM0VFMtSk9QLWdoVi1Uc2xEb2FvNmc?oc=5" target="_blank" rel="noopener">ChatGPT — Release Notes - OpenAI Help Center</a></h3>
-      <p class="card-summary">ChatGPT — 发行说明 OpenAI 帮助中心</p>
     </article>
     <article class="card" data-person="Mark Zuckerberg">
       <div class="card-header">
@@ -633,7 +625,7 @@
     var buttons = document.querySelectorAll('.person-btn');
     var cards = document.querySelectorAll('.card');
     var statsText = document.getElementById('statsText');
-    var total = 46;
+    var total = 45;
 
     buttons.forEach(function(btn) {
       btn.addEventListener('click', function() {
@@ -696,7 +688,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-04-10 05:37';
+    var originalTime = '2026-04-10 06:30';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
