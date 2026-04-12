@@ -226,7 +226,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-04-13 04:23 北京时间（每小时自动刷新）</p>
+    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-04-13 05:23 北京时间（每小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -251,7 +251,7 @@
   </div>
 
   <main class="container">
-    <p class="stats" id="statsText">共聚合 41 条言论</p>
+    <p class="stats" id="statsText">共聚合 42 条言论</p>
     <article class="card" data-person="Marc Andreessen">
       <div class="card-header">
         <span class="badge" style="background:#fff8e1;color:#f57f17">Marc Andreessen</span>
@@ -291,6 +291,14 @@
       </div>
       <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMiswJBVV95cUxPQk5VeFpGcU5RYVFlSnNHY2g3THdMNWdxX0RhRWJBS1BtZXNhRVRmUWRlb1ZmcVB3Sm80eVNqbFdCWF9Mam0tblZkeXk4YjR6LXEwTjlqVWY1TUFRS1ctRGw5Z1A0dXlHbGpZMUg2WmVTQUk5ckdUWWVOZ0R5UkFBUXJjU2lIRlR6czdSS040SWktbUpLMFR6R1pHYnhJLUdmTnltdVBodnFtc1JqSW45RkxwUEVZQ3VkNTRFQVp4eDlpejFtUzdwUlFLalJob2dZMjl0eGE1LUpQZlNVY1U5X1I1ZHRTVWRVR19fcTRieEgtbXUtVTFuRl9GbEtnMTNmbDVteG4xSUY1TVN5dkUwNGNJRWRsQTR4b01wYU1UYXNlN2l5WEJPZWpQd0VkazJDdzBn0gG4AkFVX3lxTE4xcndEdEVLOVVUMHVxVVBlOUlpUVB2MDlhNW1vYko2blREZnc5VXpHSGlucGFVRG85YnNfc0xLTlBvQ0cyNXY1eWVSLUZOcnowWEdoQUJQXzRqQkNZUFdPckl5SnU0cFZXVGtKVXl5Njl6eC14TTNQeWQ4S210M3AtTDR4XzQ3bEtPa0ZYYTZNTm9Kb3RFTFk3cXZSZ3R2amhycXdVM3RWajRnQ1VNc0NTcWlfcVZIYzczRDcwaVdrNjBlR0F2QU9XQldPVjhYdmpiVzB2UzNLVVo5cG85ekFsSloyUzJMaURBREY4STl2NjdzWEtaOTM3TEdyWGc5SGFSMzFnaHFpclVGVGRvVDhyRGpHclJtajhZbmY0TGZTd2E3ME1WWUJWcm4yNTZ0aFVpMmpwLUNjTw?oc=5" target="_blank" rel="noopener">Meta&#x27;s most-popular former employee and father of AI Yann LeCun calls Anthropic&#x27;s latest model that has e - The Times of India</a></h3>
       <p class="card-summary">科技新闻新闻：Meta 的前首席人工智能科学家、被誉为现代深度学习先驱的三位研究人员之一的 Yann LeCun 对这种恐慌不以为然。</p>
+    </article>
+    <article class="card" data-person="Sam Altman">
+      <div class="card-header">
+        <span class="badge" style="background:#e8f5e9;color:#2e7d32">Sam Altman</span>
+        <span class="meta">GNews: Sam Altman · Sat, 11 Apr 2026 20:05:21 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxQcnFpdVZpVGtPdVJTdlVpWnhHUFJKR0k2cFpGUlFiWnFmc0ZlWWd4cU9YRGdlLWEwTnp1Y2Rfbk5mNFFQa0U0OGxTNGNRZ1BReW1DUTZuSVFKUEZzc0tjNjktNzhIMnpEeVQxSnNwZzZ6WjJrRnZVZUZvWHBqSzhOdUE1VGlZU3dkTk1hajNCSjNsQkNsUGFUNw?oc=5" target="_blank" rel="noopener">Sam Altman links alleged attack on S.F. home to growing anxiety over AI - San Francisco Chronicle</a></h3>
+      <p class="card-summary">山姆·奥尔特曼 (Sam Altman) 将涉嫌袭击 S.F.人们对人工智能的焦虑日益加剧 旧金山纪事报</p>
     </article>
     <article class="card" data-person="Tim Cook">
       <div class="card-header">
@@ -593,7 +601,7 @@
     var buttons = document.querySelectorAll('.person-btn');
     var cards = document.querySelectorAll('.card');
     var statsText = document.getElementById('statsText');
-    var total = 41;
+    var total = 42;
 
     buttons.forEach(function(btn) {
       btn.addEventListener('click', function() {
@@ -656,7 +664,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-04-13 04:23';
+    var originalTime = '2026-04-13 05:23';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
