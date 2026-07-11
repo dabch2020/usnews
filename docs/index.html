@@ -226,7 +226,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-07-12 06:35 北京时间（每小时自动刷新）</p>
+    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-07-12 07:42 北京时间（每小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -251,7 +251,7 @@
   </div>
 
   <main class="container">
-    <p class="stats" id="statsText">共聚合 44 条言论</p>
+    <p class="stats" id="statsText">共聚合 45 条言论</p>
     <article class="card" data-person="Sam Altman">
       <div class="card-header">
         <span class="badge" style="background:#e8f5e9;color:#2e7d32">Sam Altman</span>
@@ -307,6 +307,14 @@
       </div>
       <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxOVko2a2E2ZDZOYWpZM1J1LUdtREU5bE0wRncyaHEzQVIyQUpzVHBYNUY5dXRSTHJVOWttRW1GaUlXemtfNTlMdkhyaFNkdEw1dDRiSWtIZjhBVGtGTTdTUWNNWWs5Z3ZoSnFFR09pR2Z0YjBzZ05xYjhIM2NqZl84QnR0RFV0eUVfMThFM3FYYUZUVmRO?oc=5" target="_blank" rel="noopener">Elon Musk Abruptly Bails on Live Interview as SpaceX Slumps - The Daily Beast</a></h3>
       <p class="card-summary">埃隆·马斯克 (Elon Musk) 戏剧性地缺席了周五大肆宣传的电视直播采访。随着 SpaceX 股价下跌 3%，CNBC 备受吹捧的世界首富独家专访突然化为乌有。 《快钱中场报道》主持人斯科特·瓦普纳 (Scott Wapner) 在马斯克原定出场时间约 11 分钟后透露了这一消息。 “你想跟我们解释一下这里究竟发生了什么吗？”瓦普纳询问科技记者朱莉娅·布尔斯汀(Julia Boorstin)，后者正准备采访马斯克。</p>
+    </article>
+    <article class="card" data-person="Reid Hoffman">
+      <div class="card-header">
+        <span class="badge" style="background:#e0f2f1;color:#00695c">Reid Hoffman</span>
+        <span class="meta">GNews: Reid Hoffman · Sat, 11 Jul 2026 05:12:37 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxOT1dEak5kME5FQ2N3TF9QMGtuWlRGNVU0V3IwNTVHR1hPbUU3WW01V2FBd0I1dTlEclVjUmRock5tVVVMTG5FVjAzbkNXUjg0Um1FQmNzdzFZZkZZRUVCbGF5UklINTcwZEdyZ2VydWVSLTI3Z19kVEQyV0t3Z01XSF9ZN3hEVDl0Z25sSl9EQ0xWX3VYemNkcFRMc1FDaGxPaUlnbGo3UzdxT0JlMmczODVVVW1LZDdUUE40M0Z3?oc=5" target="_blank" rel="noopener">Reid Hoffman says leaders need to update their AI strategy. His advice: weekly check-ins. - AOL.com</a></h3>
+      <p class="card-summary">LinkedIn 联合创始人 Reid Hoffman 表示，太多经理将人工智能视为软件更新。他建议利用人工智能工具进行更深入的探索——结合每周的会议。霍夫曼不喜欢人工智能的投资策略。他称之为“商学院平庸”。 LinkedIn 联合创始人 Reid Hoffman 向领导公司人工智能战略的经理们传达了一条直言不讳的信息：你的方法可能已经过时了。周一，在华盛顿特区举行的 2026 年 Semafor 世界经济峰会上，霍夫曼（现为 Greylock 合伙人）...</p>
     </article>
     <article class="card" data-person="Tim Cook">
       <div class="card-header">
@@ -617,7 +625,7 @@
     var buttons = document.querySelectorAll('.person-btn');
     var cards = document.querySelectorAll('.card');
     var statsText = document.getElementById('statsText');
-    var total = 44;
+    var total = 45;
 
     buttons.forEach(function(btn) {
       btn.addEventListener('click', function() {
@@ -680,7 +688,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-07-12 06:35';
+    var originalTime = '2026-07-12 07:42';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
