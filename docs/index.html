@@ -226,7 +226,7 @@
         <span class="icon">&#x21bb;</span> 刷新
       </button>
     </div>
-    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-08-25 18:19 北京时间（每小时自动刷新）</p>
+    <p class="subtitle">实时聚合美国科技行业领袖最新言论 · 最后更新：2026-08-25 19:15 北京时间（每小时自动刷新）</p>
   </header>
 
   <div class="sources">
@@ -251,7 +251,7 @@
   </div>
 
   <main class="container">
-    <p class="stats" id="statsText">共聚合 44 条言论</p>
+    <p class="stats" id="statsText">共聚合 45 条言论</p>
     <article class="card" data-person="">
       <div class="card-header">
         <span class="badge" style="background:#eeeeee;color:#333333">科技资讯</span>
@@ -332,12 +332,20 @@
       <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMiuwFBVV95cUxNZHJtLUFFTUVENkZDMWdpUWU1cTZzajl0MGVNTlFqY0ZBYkRzTGtPbU5XcmQtbWJTWnVXVktFQW5JMEZ5M05Sb1FWb3F3Um9CNk9LUmdncHROcVlBRmJ1RnNMMnZITkg4dnZYNGx6bksxcVFyRXZ4WW5MZGx4QzZuRDk1eEZZMHZoMzVtT0szdGpvUzFnQXkxVHd4aVBnR0MyMEdBX2xDVE8wVGNoWldPVUFROF9uRGxxaTNF?oc=5" target="_blank" rel="noopener">Part-time Hawaii resident Mark Zuckerberg buys an Irish castle - Honolulu Star-Advertiser</a></h3>
       <p class="card-summary">Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.</p>
     </article>
+    <article class="card" data-person="Tim Cook">
+      <div class="card-header">
+        <span class="badge" style="background:#f3e5f5;color:#6a1b9a">Tim Cook</span>
+        <span class="meta">GNews: Tim Cook · Mon, 24 Aug 2026 19:38:00 GMT</span>
+      </div>
+      <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMinAFBVV95cUxNR21vb00tTG5FXy1jLTdfekRmOVYtVnRPSW8yVEpvQlZ6OGx6eXh3VUlYRDlmUDlvTGpTR2Z2SURsZVZGaVNnd2tyLWhjbE02MUJ2SkE0RFRoMnNWZ3J5MnFUeE5iVjJvNVpmSWg4NjRsa3JOSXQ0UzJrMURpZFJHck5JRFVUbU9TQ3MxQzZuNjcyQUEwU1ZuTHEwaTc?oc=5" target="_blank" rel="noopener">At Apple CEO’s Farewell, Tributes and an Unusually Personal Tim Cook - The Information</a></h3>
+      <p class="card-summary">Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.</p>
+    </article>
     <article class="card" data-person="Elon Musk">
       <div class="card-header">
         <span class="badge" style="background:#fce4ec;color:#c62828">Elon Musk</span>
         <span class="meta">GNews: Elon Musk · Mon, 24 Aug 2026 18:45:22 GMT</span>
       </div>
-      <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNenFaRnNzODc0bFNvdzRhU0xrNko5Z0JQc01JYW11T2JId2pFclg0OUVwMmJQdXBqSHRIcUV2aTQxekI4TC1FV0VpVnB4a09oMzdRTUcxREJvdXNxZVNSSnliX29ndnhvbDFiMEIwUkt1M09vNnUzLXNlazhNb041RGR2ejFrLXIxWkZwY1BQdXNkRlpMbllWcXVMd09YSDZIWEc0WGFnaDFVZkV6UFNfZXJPSQ?oc=5" target="_blank" rel="noopener">Musk Sees SpaceX’s Orbital Data Center Launch Near End of 2027 - Bloomberg.com</a></h3>
+      <h3 class="card-title"><a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNenFaRnNzODc0bFNvdzRhU0xrNko5Z0JQc01JYW11T2JId2pFclg0OUVwMmJQdXBqSHRIcUV2aTQxekI4TC1FV0VpVnB4a09oMzdRTUcxREJvdXNxZVNSSnliX29ndnhvbDFiMEIwUkt1M09vNnUzLXNlazhNb041RGR2ejFrLXIxWkZwY1BQdXNkRlpMbllWcXVMd09YSDZIWEc0WGFnaDFVZkV6UFNfZXJPSQ?oc=5" target="_blank" rel="noopener">Musk Sees SpaceX’s Orbital Data Center Launch Near End of 2027 - Bloomberg</a></h3>
       <p class="card-summary">Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.</p>
     </article>
     <article class="card" data-person="Sam Altman">
@@ -617,7 +625,7 @@
     var buttons = document.querySelectorAll('.person-btn');
     var cards = document.querySelectorAll('.card');
     var statsText = document.getElementById('statsText');
-    var total = 44;
+    var total = 45;
 
     buttons.forEach(function(btn) {
       btn.addEventListener('click', function() {
@@ -680,7 +688,7 @@
   };
 
   function pollForUpdate() {
-    var originalTime = '2026-08-25 18:19';
+    var originalTime = '2026-08-25 19:15';
     var attempts = 0;
     var maxAttempts = 24;
     var timer = setInterval(function() {
